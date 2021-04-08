@@ -32,13 +32,11 @@ public:
         for (std::size_t i = 0 ; i < vectorAsArray.size() ; i++ )
         {
             std::cout << vectorAsArray[i] << ", ";
-            //i++;
-
         }
         std::cout << "]\n";
     }
 
-    void fillArray()
+    void fillArrayExample()
     {
         vectorAsArray.at(0) = 3;
         vectorAsArray.at(1) = 2;
