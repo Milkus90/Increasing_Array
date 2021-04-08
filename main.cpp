@@ -76,12 +76,17 @@ private:
 
 
 
-
-
 int main()
 {
     IncreasingArray array = IncreasingArray(5);
-    array.fillArray();
+    array.fillArrayExample();
     array.printArray();
+    array.howManyMovesToAscending();
+
+    IncreasingArray array2 = IncreasingArray(50);
+    array2.fillArrayWithRandom();
+    array2.printArray();
+    array2.howManyMovesToAscending();
+
     return 0;
 }
