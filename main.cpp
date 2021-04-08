@@ -45,6 +45,30 @@ public:
         vectorAsArray.at(4) = 7;
     }
 
+    void fillArrayWithRandom()
+    {
+        srand((long)&vectorAsArray);
+
+        for (std::size_t i = 0 ; i < vectorAsArray.size() ; i++ )
+        {
+            vectorAsArray[i] = rand() % 100;
+        }
+    }
+
+    void howManyMovesToAscending()
+    {
+        int movesCount = 0;
+        for (std::size_t i = 0 ; i < (vectorAsArray.size()-1) ; i++ )
+        {
+            if (vectorAsArray[i]>vectorAsArray[i+1])
+            {
+                movesCount += vectorAsArray[i] - vectorAsArray[i+1];
+                vectorAsArray[i+1] = vectorAsArray[i];
+            }
+        }
+        std::cout << "To make this array ascending " << movesCount << " moves is needed." << std::endl;
+    }
+
 private:
     std::vector<int> vectorAsArray;
 
